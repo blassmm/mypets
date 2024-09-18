@@ -1,0 +1,90 @@
+* {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*SECTION HERO ------------- */
+nav ul {
+    display: flex;
+    position: relative; /* Puedes quitarlo si no es necesario */
+    justify-content: flex-start;
+    border: solid blue 2px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    border: solid red 2px;
+    justify-content: flex-start;
+    margin: 0 10px; /* Añade espacio entre los elementos si es necesario */
+}
+
+
+/*SECTION 2 ------------- SLIDER*/
+.testimonial-slider {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.slide img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.client-name {
+    font-weight: bold;
+    color: #333;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

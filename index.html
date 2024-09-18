@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Pets</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <nav>
-        <ul>
+        <ul style="list-style: none;">
             <li>Logo</li>
             <li>Desplegable</li>
         </ul>
@@ -18,10 +19,10 @@
         <section class="hero">
             <h1>¿Perdiste  tu perro / gato?</h1>
             <div>
-                <h2>Descarga la App</h2>
+                <h4>Descarga la App</h4>
                 <span>Boton google play</span>
                 <span>Boton app store</span>
-                <h3>Con nuestra herramienta de geolocalización en tiempo real, vas a poder ubicar todos los perros y gatos que se encuentren en tu zona.</h3>
+                <p>Con nuestra herramienta de geolocalización en tiempo real, vas a poder ubicar todos los perros y gatos que se encuentren en tu zona.</p>
                 <img src="" alt="3-perros">
             </div>
             <div>
@@ -32,20 +33,53 @@
         </section>
 
         <section class="section2">
-            <div>
-                <img src="" alt="icon1">
-                <h2>Reporta en tiempo real</h2>
-                <h4>Con un simple click si perdiste o encontraste un perro/ gato.</h4>
+            <div class="wrapper">
+                <div>
+                    <img src="" alt="icon1">
+                    <h4>Reporta en tiempo real</h4>
+                    <h4>Con un simple click si perdiste o encontraste un perro/ gato.</h4>
+                </div>
+                <div>
+                    <img src="" alt="icon2">
+                    <h4>Ayuda en los reencuentros</h4>
+                    <h4>Avisale al resto de la comunidad que en determinada ubicación, encontraste un animal.</h4>
+                </div>
+                <div>
+                    <img src="" alt="icon3">
+                    <h2>Instituciones</h2>
+                    <h4>Interactuá con Veterinarias, Pet Shops y Refugios.</h4>
+                </div>
             </div>
-            <div>
-                <img src="" alt="icon2">
-                <h2>Ayuda en los reencuentros</h2>
-                <h4>Avisale al resto de la comunidad que en determinada ubicación, encontraste un animal.</h4>
-            </div>
-            <div>
-                <img src="" alt="icon3">
-                <h2>Instituciones</h2>
-                <h4>Interactuá con Veterinarias, Pet Shops y Refugios.</h4>
+            <div class="wrapper">
+                <h1>Opiniones de My Pets</h1>
+                <h4>Enterate lo que dice la gente sobre My Pets y sus experiencias con nuestra aplicación al encontrar a su mascota perdida.</h4>
+                <div class="testimonial-slider">
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="cliente1.jpg" alt="Cliente 1">
+                            <p class="testimonial">"Excelente servicio, superó mis expectativas!"</p>
+                            <h3 class="client-name">- Juan Pérez</h3>
+                        </div>
+                        <div class="slide">
+                            <img src="cliente2.jpg" alt="Cliente 2">
+                            <p class="testimonial">"Un equipo muy profesional, quedé muy satisfecho."</p>
+                            <h3 class="client-name">- María García</h3>
+                        </div>
+                        <div class="slide">
+                            <img src="cliente3.jpg" alt="Cliente 3">
+                            <p class="testimonial">"Sin duda volveré a contratar sus servicios, muy recomendados."</p>
+                            <h3 class="client-name">- Carlos López</h3>
+                        </div>
+                        <div class="slide">
+                            <img src="cliente4.jpg" alt="Cliente 4">
+                            <p class="testimonial">"Todo fue perfecto, mejor de lo que esperaba."</p>
+                            <h3 class="client-name">- Ana Sánchez</h3>
+                        </div>
+                        <!-- Puedes agregar más testimonios aquí -->
+                    </div>
+                    <button class="prev">&lt;</button>
+                    <button class="next">&gt;</button>
+                </div>
             </div>
         </section>
     </main>
