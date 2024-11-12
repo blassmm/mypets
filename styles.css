@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -29,7 +31,7 @@ body {
   align-items: center;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 680px) {
   body::after {
     background: url(resources/bg.webp);
 
@@ -40,7 +42,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.3;
+    opacity: 0.6;
   }
 }
 
@@ -68,82 +70,80 @@ body {
 .logo-container {
   display: flex;
   justify-content: center;
-  padding: clamp(3rem, 3vw, 5rem);
+  padding: 1rem;
 }
 
 .logo {
   max-width: 100%;
 }
 
-
 .section-1 > h1 {
+  max-height: 180px;
+  overflow: hidden;
+  /* border: solid red 1px; */
+  margin: 1rem;
+
   color: #fff;
-  font-size: clamp(3rem, 3vw, 7rem);
+  font-size: 1.25rem;
   font-weight: lighter;
   font-style: normal;
   font-style: italic;
 
   text-align: center;
-  /* margin-bottom: clamp(10px, 5vw, 60px); */
-  padding: 0.5rem;
-  margin-top: clamp(1rem, 3vw, 3rem);
 }
 
 .first-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 1.5rem;
 }
 
 .izquierda {
+  /* border: solid red 1px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .izquierda h4 {
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: 1rem;
   color: #fff;
   font-weight: lighter;
   font-style: normal;
-  font-style: italic;
+}
 
-  margin-top: 40px;
-  margin-bottom: 10px;
+.p-container {
+  padding: 0 40px; /* 0 arriba y abajo, 20px a la izquierda y derecha */
 }
 
 .izquierda p {
-  font-size: clamp(1rem, 1.5rem);
+  text-wrap: pretty;
+  margin-top: 1rem;
+  font-size: 1rem;
   color: #fff;
-  font-weight: lighter;
-  font-style: normal;
-  font-style: italic;
 
   text-align: center;
-  padding: 10px;
-}
-
-.izquierda img {
-  width: clamp(25px, 50vw, 150px);
 }
 
 .botones {
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  /* border: 3px solid red; */
+  margin-top: 1rem;
+  gap: 0.25rem;
+}
+
+.izquierda img {
+  width: 100px;
 }
 
 .derecha {
-  display: flex;
-  justify-content: center;
+  /* border: solid red 1px; */
+  margin: 0 auto;
 }
 
 .derecha img {
-  max-width: 100%;
-  min-width: 9rem;
-
-  min-height: 80%;
+  max-width: 90%;
+  min-width: 100%;
 }
 
 .wave-bg {
@@ -193,13 +193,13 @@ body {
   ; */
 }
 
-.row2{
+.row2 {
   text-align: center;
   line-height: 2rem;
   font-size: 20px;
 }
 
-.row2 p{
+.row2 p {
   margin-top: 2rem;
 }
 
@@ -212,7 +212,7 @@ body {
   h2 {
     text-align: center;
     font-size: 2rem;
-    color: #ffb526;;
+    color: #ffb526;
   }
 
   p {
@@ -269,7 +269,7 @@ body {
 
 /* ---------------------------------------------- FOOTER STARTS ---------------------------------------------------- */
 
-footer{
+footer {
   margin-top: 10rem;
   color: #fff;
   padding: 50px 0 30px;
@@ -280,7 +280,7 @@ footer{
   background: linear-gradient(0deg, #ffde5b 0%, rgba(246, 153, 37, 1) 100%);
 }
 
-.row{
+.row {
   width: 85%;
   /* border: 1px solid red; */
   margin: auto;
@@ -290,39 +290,39 @@ footer{
   justify-content: space-between;
 }
 
-.col{
+.col {
   flex-basis: 50%;
   padding: 10px;
 }
-  
-.logo2{
+
+.logo2 {
   width: 100px;
   margin-bottom: 30px;
 }
 
-.col h3{
+.col h3 {
   width: fit-content;
   margin-bottom: 40px;
   position: relative;
 }
 
-.email-id{
+.email-id {
   width: fit-content;
   border-bottom: 1px solid #fff;
   margin: 20px 0;
 }
 
-ul li{
+ul li {
   list-style: none;
   margin-bottom: 12px;
 }
 
-ul li a{
+ul li a {
   text-decoration: none;
   color: #fff;
 }
 
-form{
+form {
   padding-bottom: 15px;
   display: flex;
   align-items: center;
@@ -332,12 +332,12 @@ form{
   margin-bottom: 50px;
 }
 
-form .far{
+form .far {
   font-size: 18px;
   margin-right: 10px;
 }
 
-form input{
+form input {
   width: 100%;
   background: transparent;
   color: black;
@@ -350,20 +350,19 @@ input[type="email"]::placeholder {
   opacity: 1;
 }
 
-
-form button{
+form button {
   background: transparent;
   border: 0;
   outline: none;
   cursor: pointer;
 }
 
-form button .fa-solid{
+form button .fa-solid {
   font-size: 16px;
   color: #fff;
 }
 
-.social-icons .fa-brands{
+.social-icons .fa-brands {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -376,14 +375,108 @@ form button .fa-solid{
   cursor: pointer;
 }
 
-hr{
+hr {
   width: 90%;
   border: 0;
   border-bottom: 1px solid #fff;
   margin: 20px auto;
 }
 
-.copyright{
+.copyright {
   text-align: center;
   margin: 0 auto;
 }
+
+/* ---------------------------------------------- BUTTON MUSIC STARTS ---------------------------------------------------- */
+/* From Uiverse.io by Yaya12085 */
+.container {
+  width: 7em;
+  height: 7em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #090909;
+  background-color: transparent;
+  background-image: linear-gradient(145deg, #171717, #444245);
+  box-sizing: border-box;
+  box-shadow: inset 2px 2px 0 #7d7c7e, inset -2px -2px 0px #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container input {
+  display: none;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  width: 7.25em;
+  height: 7.25em;
+  border-radius: inherit;
+  background-color: transparent;
+  background-image: linear-gradient(145deg, #262626, #606060);
+  z-index: -1;
+  box-shadow: 11px 11px 22px #141414, -11px -11px 22px #525252;
+}
+
+.button .icon {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+}
+
+.button .icon svg {
+  height: 100%;
+  width: 100%;
+  fill: #a5a5a5;
+}
+
+.container input:checked + .button {
+  box-shadow: inset -2px -2px 0 #5e5e5e, inset 2px 2px 0 #1c1c1c;
+  border: 4px solid rgba(77, 124, 255, 0.281);
+  animation: animeBorder 0.3s linear alternate-reverse infinite;
+}
+
+.container input:checked + .button .icon svg {
+  fill: rgb(77, 124, 255);
+  animation: animeFill 0.3s linear alternate-reverse infinite;
+}
+
+@keyframes animeFill {
+  to {
+    fill: rgba(77, 124, 255, 0.642);
+  }
+}
+
+@keyframes animeBorder {
+  to {
+    border-color: rgba(77, 124, 255, 0.137);
+  }
+}
+
+/* ---------------------------------------------- SECTION 5 STARTS ---------------------------------------------------- */
+.section-5 {
+  border: solid red 1px;
+  display: grid;
+  min-height: 33dvh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.section-5 > *{
+  display: grid;
+  border: solid red 1px;
+  height: 100px;
+  align-content: center;
+  justify-content: center;
+}
+
